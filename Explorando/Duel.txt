@@ -1,0 +1,76 @@
+Comando: .f duel 
+
+[01] void | Duel.Activate(Effect e)
+[02] bool | Duel.ActivateFieldSpell(Card c, e, tp, eg, ep, ev, re, r, rp, target_p)
+[03] void | Duel.AddCustomActivityCounter(int counter_id, int activity_type, function f)
+[04] void | Duel.AddNoTributeCheck()
+[05] void | Duel.AdjustInstantly([Card c])
+[06]  int | Duel.AnnounceAnotherAttribute(group g, int player)
+[07]  int | Duel.AnnounceAnotherRace(group g, int player)
+[08]  int | Duel.AnnounceAttribute(int player, int count, int available)
+[09]  int | Duel.AnnounceCard(int player[, ...])
+[10]  int | Duel.AnnounceCoin(int player[,bool confirm_dialog=true])
+
+[11] int|nil, int|nil | Duel.AnnounceLevel(int player[,int min = 1,int max=12, int exception=nil,...])
+[12]          int,int | Duel.AnnounceNumber(int player, int number, ...)
+[13] int|nil, int|nil | Duel.AnnounceNumberRange(int player[,int min = 1,int max=12, ...])
+[14]              int | Duel.AnnounceRace(int player, int count, int available)
+[15]              int | Duel.AnnounceType(int player)
+[16]              int | Duel.AskAny(stringid)
+[17]              int | Duel.AskEveryone(stringid)
+[18]             void | Duel.AssumeReset()
+[19]             void | Duel.AttackCostPaid([int paid=1])
+[20]             void | Duel.BreakEffect()
+
+[21] void | Duel.CalculateDamage(Card c1, Card c2|nil)
+[22] bool | Duel.CallCoin(int player)
+[23] bool | Duel.CanPlayerSetMonster(int player[, Card sumcard, int sumtype])
+[24] bool | Duel.CanPlayerSetSpellTrap(int player[, Card setcard])
+[25] void | Duel.ChainAttack([Card c])
+[26] void | Duel.ChangeAttacker(Card c[, int ign = false])
+[27] bool | Duel.ChangeAttackTarget(Card c|nil)
+[28] void | Duel.ChangeBattleDamage(int player, int value[, bool check=true])
+[29] void | Duel.ChangeChainOperation(int chain_idx, function f)
+[30]  int | Duel.ChangePosition(Card|Group targets, int au[, int ad=au, int du=au, int dd=au, bool noflip=false])
+
+[31]                                      void | Duel.ChangeTargetCard(int chainc, Group g)
+[32]                                      void | Duel.ChangeTargetParam(int chainc, int param)
+[33]                                      void | Duel.ChangeTargetPlayer(int chainc, int player)
+[34]                                      void | Duel.ChangeToFaceupAttackOrFacedownDefense(Card card, int tp)
+[35]                                      bool | Duel.CheckChainTarget(int chainc, Card c)
+[36]                                      bool | Duel.CheckChainUniqueness()
+[37] bool[, Group, int, int, Effect, int, int] | Duel.CheckEvent(int event[, bool get_info])
+[38]                                      bool | Duel.CheckLocation(int player, int location, int seq)
+[39]                                      bool | Duel.CheckLPCost(int player, int cost)
+[40]                                      bool | Duel.CheckPendulumZones(int player)
+
+[41] bool | Duel.CheckPhaseActivity()
+[42] bool | Duel.CheckReleaseGroup(int player, function f, int count[, bool use_hand=false, int max=min, bool check_field=false, Card card_to_check=nil, int to_player=player, int zone=0xff, bool use_oppo=false], Group|Card ex|nil, ...)
+[43] bool | Duel.CheckReleaseGroupCost(int player, function f, int minc[, int maxc=minc], bool use_hand, function spcheck, Card|Group|nil ex,...)
+[44] bool | Duel.CheckReleaseGroupEx(int player, function f, int count[, bool use_hand=true, int max=min, bool check_field=false, Card card_to_check=nil, int to_player=player, int zone=0xff, bool use_oppo=false], Group|Card ex|nil, ...)
+[45] bool | Duel.CheckReleaseGroupSummon(card c, int player, effect e, function fil, int min, int max, function last,...)
+[46] bool | Duel.CheckRemoveOverlayCard(int player, int s, int o, int count, int reason[, Group ocard])
+[47] bool | Duel.CheckSummonedCount([Card c])
+[48] bool | Duel.CheckTiming(int timing)
+[49] bool | Duel.CheckTribute(Card c, int min[, int max=min, Group|nil mg, int tp=c:GetControler(), int zone=0x1f])
+[50] void | Duel.ClearOperationInfo(int chainc)
+
+[01] int | Duel.GetCurrentPhase()
+Gets the current Phase of the game (corresponds to PHASE_x in constants.lua) 
+
+[51] void | Duel.Hint(int hint_type, int player, int desc)
+Creates a message for the "player" which has "type" as key and "desc" as value. It is entirely up to the client to interpret say data, the most common case is setting the selection message with, "type" being "HINT_SELECTMSG" and "desc" being a stringId. It is also used to implement Skill Cards visually. Check the "HINT_XXX" constants for their behaviour. 
+
+[52] void | Duel.HintSelection(Card|Group selection[, bool log_as_selection=false])
+
+-Duel.IsPlayerCanDraw
+O jogador pode comprar cartas ?
+
+[60] void | Duel.SetOperationInfo(int chainc, int category, Card|Group targets, int count, int target_player, int target_param)
+
+[70]      int | Duel.SpecialSummon(Card|Group targets, int sumtype, int sumplayer, int target_player, bool nocheck, bool nolimit, int pos[, int zone=0xff])
+A player (int sumplayer) Special Summons a card/group of cards (Card|Group targets) with summon type described with SUMMON_TYPE_x (int sumtype) to a player's (int target_player) field in the specific zone (here zone 0xff, means the default zones). If (bool nocheck) is true, it will summon ignoring conditions. If (bool nolimit) is true, it will summon ignoring the revive limit. Returns the number of cards successfully summoned. 
+
+[71] void|int | Duel.SpecialSummonComplete()
+[72]     void | Duel.SpecialSummonRule(int player, Card c[, int sumtype=0])
+[73]     bool | Duel.SpecialSummonStep(Card c, int sumtype, int sumplayer, int target_player, bool nocheck, bool nolimit, int pos[, int zone=0xff])

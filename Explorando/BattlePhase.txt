@@ -1,0 +1,11 @@
+A classe BattlePhase parece ser uma estrutura de dados para representar as fases de batalha em um jogo de cartas, provavelmente associado ao Yu-Gi-Oh! Trading Card Game ou a um jogo similar. Vamos analisar os membros da classe:
+
+AttackableCards: Uma lista de cartas que podem ser atacadas durante a fase de batalha. Essa lista provavelmente contém instâncias da classe ClientCard ou uma classe semelhante que representa as cartas no campo de batalha.
+
+ActivableCards: Uma lista de cartas que podem ser ativadas durante a fase de batalha. Da mesma forma, esta lista provavelmente contém instâncias da classe ClientCard ou uma classe semelhante.
+
+ActivableDescs: Uma lista de descritores (por exemplo, IDs) associados às cartas que podem ser ativadas durante a fase de batalha. Esta lista pode ser uma alternativa para armazenar informações sobre as cartas ativáveis.
+
+CanMainPhaseTwo: Uma propriedade booleana que indica se o jogador pode entrar na Fase Principal 2 após a Fase de Batalha. Isso sugere que o código está lidando com as diferentes fases do turno em um jogo de cartas.
+
+CanEndPhase: Uma propriedade booleana que indica se o jogador pode encerrar a fase atual. Pode ser usado para verificar se o jogador deseja passar para a próxima fase do turno.

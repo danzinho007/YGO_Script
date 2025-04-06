@@ -1,0 +1,64 @@
+Essa função define o efeito de ativação de uma carta, provavelmente uma Spell ou Trap. Ao ser ativada, ela faz o jogador alvo comprar uma quantidade de cartas.
+
+Exemplo 003: 
+function s.activate(e,tp,eg,ep,ev,re,r,rp)
+	local p,d=Duel.GetChainInfo(0,CHAININFO_TARGET_PLAYER,CHAININFO_TARGET_PARAM)
+	Duel.Draw(p,d,REASON_EFFECT)
+end
+
+function s.activate(...)
+Define a função de ativação do efeito da carta. O s geralmente é uma referência à tabela de script da carta.
+Parâmetros (e, tp, eg, ep, ev, re, r, rp)
+São padrão em scripts de cartas e representam informações sobre o efeito:
+e: o efeito atual
+tp: o jogador que ativou
+eg: grupo de cartas envolvidas
+ep: o jogador envolvido no efeito
+ev: valor do evento
+re: efeito responsável
+r: motivo da ativação
+rp: jogador que ativou o efeito original
+
+
+
+
+
+===========================
+Exemplo 04: 
+Pot of Greed > Magia normal
+--Compre 2 cartas
+
+function s.activate(e,tp,eg,ep,ev,re,r,rp)
+    local p,d=Duel.GetChainInfo(0,CHAININFO_TARGET_PLAYER,CHAININFO_TARGET_PARAM)
+    Duel.Draw(p,d,REASON_EFFECT)
+end
+
+Explicação:
+1-Ativação da carta
+--local p,d = Duel.GetChainInfo(0, CHAININFO_TARGET_PLAYER, CHAININFO_TARGET_PARAM)
+Isso obtém as informações de corrente (chain) no momento da ativação.
+CHAININFO_TARGET_PLAYER: qual jogador foi escolhido como alvo.
+CHAININFO_TARGET_PARAM: o valor numérico passado como "parâmetro" (normalmente quantas cartas comprar, neste caso).
+p será o jogador-alvo.
+d será o número de cartas a serem compradas.
+--Duel.Draw(p, d, REASON_EFFECT)
+Faz o jogador p comprar d cartas.
+REASON_EFFECT indica que isso está ocorrendo por causa de um efeito de carta.
+
+===============
+Exemplo 05:
+
+function s.activate(e,tp,eg,ep,ev,re,r,rp)
+	local p,d=Duel.GetChainInfo(0,CHAININFO_TARGET_PLAYER,CHAININFO_TARGET_PARAM)
+	Duel.Draw(p,d,REASON_EFFECT)
+--O oponente "compra" 2 cartas, mas elas irão para a mão do jogador
+    local p2,d2 = 1-tp,2
+    if Duel.Draw(p2,d2,REASON_EFFECT) > 0 then
+--Obtem as cartas compradas pelo oponente
+        local g = Duel.GetOperatedGroup()
+--Revela as cartas ao jogador
+        Duel.ConfirmCards(tp,g)
+-- Move as cartas para a mão do jogador
+        Duel.SendtoHand(g,tp,REASON_EFFECT) 
+    end
+end

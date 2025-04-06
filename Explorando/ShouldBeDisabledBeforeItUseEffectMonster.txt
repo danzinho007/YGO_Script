@@ -1,0 +1,23 @@
+O trecho de código fornecido é uma enumeração em C# chamada ShouldBeDisabledBeforeItUseEffectMonster, que enumera vários monstros no jogo Yu-Gi-Oh! que liberam ou banem a si mesmos para usar efeitos. Estes monstros são identificados como alvos que devem ser desativados (com cartas como Breakthrough Skill) antes que possam usar seus efeitos.
+
+Aqui estão algumas observações sobre as cartas listadas:
+
+Machina Megaform (51617185): Monstro que pode se banir para realizar sua invocação especial.
+
+Dark Summoning Beast (87917187): Monstro que pode se banir para invocar outros monstros.
+
+Gem-Knight Alexandrite (90019393): Monstro que pode se banir para realizar sua invocação especial.
+
+Red-Eyes Retro Dragon (53485634): Monstro que pode se banir para realizar sua invocação especial.
+
+Deep Sweeper (8649148): Monstro que pode se banir para realizar sua invocação especial.
+
+Beast-Warrior Puma (16796157): Monstro que pode se banir para realizar sua invocação especial.
+
+Zefrasaber, Swordmaster of the Nekroz (84388461): Monstro que pode se banir para ativar seus efeitos.
+
+Cipher Wing (81974607): Monstro que pode se banir para realizar sua invocação especial.
+
+Madolche Anjelly (34680482): Monstro que pode se banir para invocar outros monstros Madolche.
+
+Planet Pathfinder (97526666): Monstro que pode se banir para realizar sua invocação especial.

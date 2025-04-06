@@ -1,0 +1,22 @@
+Comando: .f level
+
+[01] function | aux.RitualCheckAdditionalLevel()
+[02]      int | Card.GetLevel(Card c)
+[03]      int | Card.GetOriginalLevel(Card c)
+[04]      int | Card.GetPreviousLevelOnField(Card c)
+[05]      int | Card.GetRitualLevel(Card c, Card rc)
+[06]      int | Card.GetSynchroLevel(Card c, Card sc)
+[07]     bool | Card.HasLevel(Card c)
+[08]     bool | Card.IsLevel(Card c, int ...)
+[09]     bool | Card.IsLevelAbove(Card c, int level)
+[10]     bool | Card.IsLevelBelow(Card c, int level)
+
+[11]             bool | Card.IsLevelBetween(Card c, int firstlv, int secondlv)
+[12]             bool | Card.IsOriginalLevel(Card c, int lv)
+[13]             bool | Card.IsPreviousLevelOnField(Card c, int lv)
+[14]             bool | Card.IsXyzLevel(Card c, Card xyzc, int lv)
+[15]         void|int | Card.Level(Card c[, int level])
+[16]              int | Card.UpdateLevel(card c, int amount[, int reset, card rc])
+[17] int|nil, int|nil | Duel.AnnounceLevel(int player[,int min = 1,int max=12, int exception=nil,...])
+[18]              int | Duel.GetCardLevelFromCode(int code)
+[19]           effect | Ritual.AddWholeLevelTribute(card c, function cond)

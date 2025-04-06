@@ -1,0 +1,11 @@
+Comando: .f SetOperation
+
+SetCountLimit(1)
+Monstro turno 
+
+SetCountLimit(1,id)
+Monstro 1x por Nome
+
+[01] void | Duel.SetOperationInfo(int chainc, int category, Card|Group targets, int count, int target_player, int target_param)
+Define informações sobre a operação que está sendo realizada na cadeia atual (int chainc = 0), pertencente a (int category), com um total de (int count) de cartas de (Card|Group targets) sendo afetadas. Elas são usadas com GetOperationInfo. Além disso, o parâmetro passado aqui é verificado se alguma das atividades relacionadas à invocação for verificada, como ACTIVITY_SUMMON, ACTIVITY_NORMALSUMMON, ACTIVITY_SPSUMMON e ACTIVITY_FLIPSUMMON.
+

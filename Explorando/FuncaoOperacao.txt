@@ -1,0 +1,111 @@
+--Função operação
+--Executa o efeito da carta
+function s.operation(e,tp,eg,ep,ev,re,r,rp)
+
+end
+
+Exemplo 01:
+function s.operation(e,tp,eg,ep,ev,re,r,rp)
+    local zone=e:GetHandler():GetLinkedZone(tp)
+    if zone==0 then return end
+    Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SPSUMMON)
+    local g=Duel.SelectMatchingCard(tp,s.filter,tp,LOCATION_HAND,0,1,1,nil,e,tp,zone)
+    if #g>0 then
+        Duel.SpecialSummon(g,0,tp,tp,false,false,POS_FACEUP,zone)
+    end
+end
+
+Exemplo 02:
+function s.operation(e,tp,eg,ep,ev,re,r,rp,chk)
+    local tc=Duel.GetFirstTarget()
+    if tc:IsFaceup() and tc:IsRelateToEffect(e) then
+        local e1=Effect.CreateEffect(e:GetHandler())
+        e1:SetType(EFFECT_TYPE_SINGLE)
+        e1:SetCode(EFFECT_DIRECT_ATTACK)
+        e1:SetReset(RESET_EVENT+RESETS_STANDARD)
+        tc:RegisterEffect(e1)
+    end
+end
+
+Explicação Geral:
+--local tc = Duel.GetFirstTarget()
+XYZ = Pega o primeiro alvo selecionado pelo efeito — no caso, aquele monstro Nível 1 com a face para cima que o jogador escolheu na função target.
+--local zone=e:GetHandler():GetLinkedZone(tp)
+Link = Obtém as zonas para onde Link Spider aponta.
+
+--if tc:IsFaceup() and tc:IsRelateToEffect(e) then
+Verifica se:
+O monstro ainda está com a face para cima;
+E ainda está no campo e ligado ao efeito, ou seja, não foi destruído ou movido antes do efeito resolver.
+--if zone==0 then return end
+Se não houver zona válida, o efeito não acontece.
+
+--local e1 = Effect.CreateEffect(e:GetHandler())
+Cria um novo efeito temporário para aplicar ao alvo.
+e:GetHandler() é a carta que ativou o efeito (no caso, o monstro "ベビー・トラゴン").
+
+--Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SPSUMMON)
+Exibe uma dica visual para o jogador escolher uma carta para Invocar.
+--local g=Duel.SelectMatchingCard(tp,s.filter,tp,LOCATION_HAND,0,1,1,nil,e,tp,zone)
+O jogador seleciona um monstro Normal de nível 4 ou menor na mão.
+local g
+Cria uma variável local chamada g, que vai armazenar o grupo de cartas escolhidas
+Duel.SelectMatchingCard	
+Função que permite ao jogador selecionar cartas que passem por um filtro
+tp	
+O jogador que está selecionando as cartas (tipicamente o jogador do turno)
+s.filter	
+Função filtro que define quais cartas são válidas para seleção
+tp	
+Verifica na mão desse jogador
+LOCATION_HAND	
+Local onde buscar as cartas: a mão do jogador
+0	
+Não procura na mão do oponente
+1, 1	
+O jogador deve escolher exatamente 1 carta
+nil	
+Nenhum grupo específico adicional
+e, tp, zone	
+Parâmetros extras passados para a função filtro (s.filter)
+--if #g>0 then
+Se um monstro for escolhido:
+--Duel.SpecialSummon(g,0,tp,tp,false,false,POS_FACEUP,zone)
+O monstro é Invocado na zona apontada por Link Spider.
+ou
+Parâmetro	Valor	Significado
+g	g	
+O grupo de cartas (no caso, 1 carta) a ser invocada
+0	0	
+Summon type: 0 significa "normal" (sem tags específicas como Fusion, etc)
+tp	tp	
+Quem está invocando
+tp	tp	
+Quem vai receber o monstro
+false	false	
+O monstro não será virado pra baixo
+false	false	
+O monstro não será invocado como em modo de defesa
+POS_FACEUP	POS_FACEUP	
+O monstro será invocado com a face para cima
+zone	zone	
+Zona exata do campo para onde o monstro será invocado (zona linkada!)
+
+function s.operation(e,tp,eg,ep,ev,re,r,rp,chk)
+--Pega o primeiro alvo selecionado pelo efeito — no caso, aquele monstro Nível 1 com a face para cima que o jogador escolheu na função target.
+    local tc=Duel.GetFirstTarget()
+--Verifica se:
+--O monstro ainda está com a face para cima;
+--E ainda está no campo e ligado ao efeito, ou seja, não foi destruído ou movido antes do efeito resolver.
+    if tc:IsFaceup() and tc:IsRelateToEffect(e) then
+        local e1=Effect.CreateEffect(e:GetHandler())
+--Efeito afeta somente 1 carta escolhida:
+        e1:SetType(EFFECT_TYPE_SINGLE)
+--Efeito que permite a carta escolhida atacar diretamente:
+        e1:SetCode(EFFECT_DIRECT_ATTACK)
+--Efeito de atacar diretamente dura até o final do turno ou até o monstro sair do campo / ser virado pra baixo
+        e1:SetReset(RESET_EVENT+RESETS_STANDARD)
+--Registra o efeito e agora o monstro escolhido pode atacar diretamente nesse turno :
+        tc:RegisterEffect(e1)
+    end
+end

@@ -1,0 +1,4 @@
+
+Exemplo: e1:SetCost(s.spoost)
+Custo da carta 
+

@@ -1,0 +1,21 @@
+O trecho de código fornecido é uma enumeração em C# chamada DangerousMonster, que enumera cartas específicas que são consideradas perigosas para atacar em um contexto de jogo. Cada valor na enumeração é uma carta representada por seu ID no jogo Yu-Gi-Oh!.
+
+Aqui estão algumas observações sobre as cartas listadas:
+
+Lion Heart (54366836): Monstro de efeito que pode infligir dano ao oponente sem levar dano de batalha.
+
+Yubel (78371393): Monstro de efeito que evolui em diferentes formas quando destruído em batalha.
+
+Yubel - The Ultimate Nightmare (31764700): Forma evoluída de Yubel, que pode causar grandes danos ao oponente.
+
+Timelords (Zaphion, Sadion, Metaion, Kamion, Lazion, Michion, Hailon, Raphion, Gabrion, Sandaion): Uma série de monstros com efeitos únicos, incluindo a capacidade de retornar cartas para o deck e infligir danos diretos.
+
+Eater of Millions (63845230): Monstro que pode remover do jogo cartas do oponente e ganhar ATK.
+
+El Shaddoll Construct (20366274): Monstro de Fusão da arquétipo Shaddoll.
+
+Zushin the Sleeping Giant (67547370): Monstro que não pode ser destruído em batalha e não inflige danos.
+
+Heart-eartH Dragon (97403510): Monstro que pode ser convocado durante uma Invocação Xyz com um monstro que possui 10000 ou mais de ATK.
+
+Daigusto Sphreez (29552709): Monstro Synchro que possui efeitos relacionados à Invocação Synchro.

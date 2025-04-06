@@ -1,0 +1,25 @@
+Siglas:
+
+c= carta
+chk= cheque
+chkc= cheque de alvo
+ct = contagem
+dg = grupo de destruição / descarte
+e= efeito
+eg= grupo de eventos
+ep= jogador de eventos
+ev= valor do evento
+fet = número de zonas francas
+g = grupo
+mg = grupo de material
+nil= valor nulo
+r= razão
+rc = cartão de razão
+re= razão efeito
+rg = grupo de cartas a serem removidas/banidas/devolvidas
+rp= razão jogador
+sg = grupo de invocação
+tc = cartão alvo
+tg = grupo alvo
+tp= gatilho de jogador
+zone= zona

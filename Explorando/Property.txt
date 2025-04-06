@@ -1,0 +1,14 @@
+.f property
+
+[01]     table | aux.PropertyTableFilter(function f, ...)
+[02]      void | Card.AssumeProperty(Card c, int assume_type, int assume_value)
+[03]   int,int | Effect.GetProperty(Effect e)
+[04]      bool | Effect.IsHasProperty(Effect e, int prop1[, int prop2])
+
+[05]      void | Effect.SetProperty(Effect e, int prop1[, int prop2])
+Sets an effect's (Effect e) property. Refer to constant.lua and card scripts that has been already there for valid properties (or ask someone). 
+
+[06] bool,void | Group.CheckDifferentProperty(Group g, function f, ...)
+[07]      bool | Group.CheckDifferentPropertyBinary(Group g, function f, ...)
+[08]      bool | Group.CheckSameProperty(/group g, function f, ...)
+

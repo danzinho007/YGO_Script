@@ -1,0 +1,23 @@
+O trecho de código fornecido é uma enumeração em C# chamada InvincibleMonster, que enumera várias cartas de monstros consideradas invencíveis em batalha no jogo Yu-Gi-Oh!. Cada valor na enumeração representa uma carta de monstro associada ao seu ID específico no jogo.
+
+Aqui estão algumas observações sobre as cartas listadas:
+
+Spirit Reaper (23205979): Monstro que não pode ser destruído em batalha e tem um efeito que permite ao controlador comprar uma carta quando é atacado diretamente.
+
+Yubel - The Ultimate Nightmare (31764700): Uma forma evoluída de Yubel, que é invulnerável em batalha e pode causar grandes danos ao oponente.
+
+Yubel - Terror Incarnate (4779091): Outra forma evoluída de Yubel com efeito de destruição em massa.
+
+Sandaion, The Timelord (33015627): Um Timelord que não pode ser destruído em batalha e inflige dano direto ao oponente.
+
+Darkness Neosphere (60417395): Monstro invulnerável em batalha e com efeitos relacionados a ganhar pontos de vida.
+
+Gabrion, The Timelord (6616912): Outro Timelord invulnerável em batalha com efeito de devolver cartas para o deck.
+
+Michion, The Timelord (7733560): Timelord que não pode ser destruído em batalha e tem efeitos relacionados à remoção do campo.
+
+Zaphion, The Timelord (28929131): Timelord que não pode ser destruído em batalha e tem efeito de limpeza de mão.
+
+Hailon, The Timelord (34137269): Timelord invulnerável em batalha que causa dano direto.
+
+Raphion, The Timelord (60222213): Timelord que não pode ser destruído em batalha e tem efeito de comprar cartas.

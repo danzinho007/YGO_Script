@@ -1,0 +1,107 @@
+--Função filtro ( ver FuncaoFiltro)
+--Não é chamada diretamente no código, sim pelo sistema do jogo
+
+--Exemplo 01:
+--Invoca especialmente
+--Exemplo: Link Aranha ( 001.lua)
+function s.filter(c,e,tp,zone)
+	return c:IsLevelBelow(4)
+end
+
+Comando: .f IsLevel
+s.filter
+
+[01] bool | Card.IsLevel(Card c, int ...)
+[02] bool | Card.IsLevelAbove(Card c, int level)
+[03] bool | Card.IsLevelBelow(Card c, int level)
+Exemplo : Lv 4 ou menor 
+
+[04] bool | Card.IsLevelBetween(Card c, int firstlv, int secondlv)
+
+c:IsType(TYPE_NORMAL)
+[01]   0x1 | TYPE_MONSTER
+[02]   0x2 | TYPE_SPELL
+[03]   0x4 | TYPE_TRAP
+[04]  0x10 | TYPE_NORMAL
+[05]  0x20 | TYPE_EFFECT
+[06]  0x40 | TYPE_FUSION
+[07]  0x80 | TYPE_RITUAL
+[08] 0x100 | TYPE_TRAPMONSTER
+[09] 0x200 | TYPE_SPIRIT
+[10] 0x400 | TYPE_UNION
+[11]    0x800 | TYPE_GEMINI
+[12]   0x1000 | TYPE_TUNER
+[13]   0x2000 | TYPE_SYNCHRO
+[14]   0x4000 | TYPE_TOKEN
+[15]   0x8000 | TYPE_MAXIMUM
+[16]  0x10000 | TYPE_QUICKPLAY
+[17]  0x20000 | TYPE_CONTINUOUS
+[18]  0x40000 | TYPE_EQUIP
+[19]  0x80000 | TYPE_FIELD
+[20] 0x100000 | TYPE_COUNTER
+[21]   0x200000 | TYPE_FLIP
+[22]   0x400000 | TYPE_TOON
+[23]   0x800000 | TYPE_XYZ
+[24]  0x1000000 | TYPE_PENDULUM
+[25]  0x2000000 | TYPE_SPSUMMON
+[26]  0x4000000 | TYPE_LINK
+[27]  0x8000000 | TYPE_SKILL
+[28] 0x10000000 | TYPE_ACTION
+[29] 0x20000000 | TYPE_PLUS
+[30] 0x40000000 | TYPE_MINUS
+[31] 0x60000000 | TYPE_PLUSMINUS
+[32] 0x80000000 | TYPE_ARMOR
+[33]     0x4011 | TYPES_TOKEN
+[34]  0x4802040 | TYPE_EXTRA
+
+===========================
+c:GetLevel()==1
+[01]      int |     Card.GetLevel(Card c)
+Somente level 1
+
+======================
+c:IsFace
+[01] bool | Card.IsFacedown(Card c)
+A carta está virado pra baixo ?
+[02] bool | Card.IsFaceup(Card c)
+A carta está virada pra cima ?
+
+============================
+c:GetEffectCount(EFFECT_DIRECT_ATTACK)
+Ganha um efeito(Ataque direto)
+
+[03]     0x1 | EFFECT_TYPE_SINGLE
+[04]     0x2 | EFFECT_TYPE_FIELD
+[05]     0x4 | EFFECT_TYPE_EQUIP
+[06]     0x8 | EFFECT_TYPE_ACTIONS
+[07]    0x10 | EFFECT_TYPE_ACTIVATE
+[08]    0x20 | EFFECT_TYPE_FLIP
+[09]    0x40 | EFFECT_TYPE_IGNITION
+[10]    0x80 | EFFECT_TYPE_TRIGGER_O
+[11]  0x100 | EFFECT_TYPE_QUICK_O
+[12]  0x200 | EFFECT_TYPE_TRIGGER_F
+[13]  0x400 | EFFECT_TYPE_QUICK_F
+[14]  0x800 | EFFECT_TYPE_CONTINUOUS
+[15] 0x1000 | EFFECT_TYPE_XMATERIAL
+[16] 0x2000 | EFFECT_TYPE_GRANT
+[17] 0x4000 | EFFECT_TYPE_TARGET
+
+======================================
+c:IsCanBeSpecialSummoned(e,0,tp,false,false,POS_FACEUP,tp,zone)
+Parâmetro = Explicação
+e	
+O efeito que está tentando fazer a invocação. Geralmente passado direto.
+0	
+O "summon type". 0 significa Invocação Especial normal (sem ser Ritual, Fusion, etc).
+tp	
+O jogador que está invocando (normalmente tp = turn player).
+false	
+Ignorar requisitos de invocação? Aqui é false, ou seja, respeita os requisitos.
+false	
+No caso de fusões/rituais, indicaria se o monstro está sendo invocado por um efeito específico. Aqui, não importa.
+POS_FACEUP	
+A posição em que o monstro será invocado: posição de ataque virado para cima.
+tp	
+O jogador que vai controlar o monstro depois da invocação. Aqui é o próprio tp.
+zone	
+Especifica em que zona o monstro pode ser invocado. Isso é usado em cartas Link, onde os pontos para onde a seta aponta determinam onde invocar.

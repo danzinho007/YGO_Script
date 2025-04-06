@@ -1,0 +1,38 @@
+Comando: .f summoned
+
+[01] effect | Card.AddCannotBeSpecialSummoned(Card c)
+[02] effect | Card.AddMustBeFusionSummoned(Card c)
+[03] effect | Card.AddMustBeLinkSummoned(Card c)
+[04] effect | Card.AddMustBePendulumSummoned(Card c)
+[05] effect | Card.AddMustBeRitualSummoned(Card c)
+[06] effect | Card.AddMustBeSpecialSummoned(Card c)
+[07] effect | Card.AddMustBeSpecialSummonedByCardEffect(Card c)
+[08] effect | Card.AddMustBeSpecialSummonedByDarkFusion(Card c)
+[09] effect | Card.AddMustBeSynchroSummoned(Card c)
+[10] effect | Card.AddMustBeXyzSummoned(Card c)
+
+[11] effect | Card.AddMustFirstBeFusionSummoned(Card c)
+[12] effect | Card.AddMustFirstBeLinkSummoned(Card c)
+[13] effect | Card.AddMustFirstBePendulumSummoned(Card c)
+[14] effect | Card.AddMustFirstBeRitualSummoned(Card c)
+[15] effect | Card.AddMustFirstBeSynchroSummoned(Card c)
+[16] effect | Card.AddMustFirstBeXyzSummoned(Card c)
+[17]   bool | Card.IsCanBeSpecialSummoned(Card c, Effect e, int sumtype, int sumplayer, bool nocheck, bool nolimit[, int sumpos=POS_FACEUP, int target_player=sumplayer, int zone=0xff])
+
+[18]   bool | Card.IsFlipSummoned(Card c)
+[19]   bool | Card.IsFusionSummoned(Card c)
+[20]   bool | Card.IsGeminiSummoned(Card c)
+
+[21] bool | Card.IsLinkSummoned(Card c)
+[22] bool | Card.IsNormalSummoned(Card c)
+[23] bool | Card.IsNouvellesSummoned(Card c)
+[24] bool | Card.IsPendulumSummoned(Card c)
+[25] bool | Card.IsReincarnationSummoned(Card c)
+[26] bool | Card.IsRitualSummoned(Card c)
+[27] bool | Card.IsSpecialSummoned(Card c)
+[28] bool | Card.IsSynchroSummoned(Card c)
+[29] bool | Card.IsTributeSummoned(Card c)
+[30] bool | Card.IsXyzSummoned(Card c)
+
+[31] bool | Duel.CheckSummonedCount([Card c])
+[32] void | Duel.IncreaseSummonedCount([Card c])

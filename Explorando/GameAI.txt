@@ -1,0 +1,99 @@
+Classe:
+
+Uma classe é um tipo de estrutura que define as propriedades e comportamentos de objetos. Ela é uma espécie de molde para a criação de objetos. As classes podem conter campos, propriedades, métodos, eventos, e outros membros.
+Dicionário:
+
+Em programação, um dicionário geralmente se refere a uma estrutura de dados que mapeia chaves a valores. Cada chave deve ser única dentro do dicionário, e ela é associada a um valor específico.
+Método:
+
+Um método é um bloco de código que realiza uma tarefa específica. Ele é geralmente definido dentro de uma classe ou estrutura e pode ser chamado para executar a operação que foi definida.
+Método público:
+
+Um método público é um método que pode ser acessado de fora da classe em que está definido. Ele é declarado com o modificador de acesso public, o que significa que pode ser chamado por outras partes do código.
+Namespace:
+
+Um namespace é uma forma de organizar código em diferentes blocos lógicos. Ele ajuda a evitar conflitos de nomes entre classes e outros membros. Classes e outros elementos podem ser agrupados em namespaces.
+Objeto:
+
+Um objeto é uma instância de uma classe. Ele representa uma entidade que possui características (propriedades) e pode realizar ações (métodos) associadas à classe da qual foi instanciado.
+Parâmetro:
+
+Um parâmetro é uma variável que é usada em uma função ou método para receber valores que são fornecidos durante a chamada dessa função ou método.
+Propriedade pública:
+
+Uma propriedade pública é um membro de uma classe que fornece acesso controlado a um campo privado. Ela é declarada com o modificador public e geralmente possui métodos de leitura (get) e gravação (set) para manipular o valor associado.
+Variável Pública:
+
+Uma variável pública é uma variável cujo escopo de acesso permite que ela seja acessada de fora da classe ou escopo em que foi definida.
+Variável Privada:
+
+Uma variável privada é uma variável cujo escopo de acesso é restrito à classe ou bloco de código em que foi definida. Ela não pode ser acessada diretamente de fora desse escopo.
+
+---Classe :
+-Dialogs
+-GameAI
+
+---Dicionário :
+-_activatedCards
+
+---Método :
+-Executor.OnNewPhase() = 
+-OnChainEnd = É chamado quando uma cadeia (chain) foi resolvida.
+-OnChaining = É chamado quando uma cadeia (chain) está sendo executada durante o jogo.
+-OnDirectAttack = É chamado quando a IA é atacada diretamente.
+-OnDraw = É chamado quando qualquer jogador compra uma carta.
+-OnJoinGame = É chamado quando a IA se junta ao jogo.
+-OnNewPhase = É chamado quando ocorre uma nova fase durante o jogo.
+-OnNewTurn = É chamado quando é um novo turno no jogo.
+-OnRockPaperScissors = É chamado quando a IA está envolvida em uma partida de "pedra, papel e tesoura" (rock-paper-scissors).
+-OnSelectAttacker  = Recebe a lista de atacantes e defensores e retorna a carta que vai atacar
+-OnSelectBattleCmd = Este método parece ser responsável por tomar decisões sobre ações a serem tomadas durante a fase de batalha, 
+-OnSelectHand = É chamado quando a IA ganha no jogo de "pedra, papel e tesoura".
+-OnStart = É chamado quando o duelo começa.
+
+Outros :
+battle.ActivableCards = Esta é uma coleção (provavelmente uma lista) de cartas que podem ser ativadas durante a fase de batalha. 
+AttackableCards = contém as cartas que a IA pode usar para atacar.
+
+---List
+-attackers = cartas que podem atacar durante a fase de batalha
+-defenders = monstros no campo do jogador oponente
+
+---Método público : 
+-Log = método público
+
+Namespace :
+WindBot.Game = namespace que contém um enum chamado de LogLevel
+
+---Objeto :
+-Executor
+-GoToEndPhase = 
+-GoToMainPhase2 = 
+
+---Parâmetros :
+-Duel duel = parâmetro que representa o GameAI
+string dialog = parâmetro que representa o GameAI
+LogLevel = parâmetro do Log
+string = parâmetro do Log
+System.Action<string, bool> chat: Parâmetro que representa uma ação relacionada ao chat.
+System.Action<string, int> log: Parâmetro que representa uma ação relacionada ao log com diferentes níveis de gravidade.
+string path: Parâmetro que representa um caminho associado a esta instância de GameAI.
+
+Propriedade pública :
+Duel = propriedade pública
+Executorz = propriedade pública
+
+Variáveis públicas : 
+Significa apenas que ela pode ser acessada por outras partes do código, não especificamente que seja uma instância de objeto.
+_dialogs = variável pública tipo Dialogs
+
+Variáveis privadas :
+_activateCards = variável privada to tipo Dictionary<int, int>
+_log = variável privada do tipo Action<string, int>
+
+---Variáveis internas :
+-
+
+
+
+

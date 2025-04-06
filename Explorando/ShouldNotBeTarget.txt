@@ -1,0 +1,23 @@
+O trecho de código fornecido é uma enumeração em C# chamada ShouldNotBeTarget, que lista cartas que não podem ser escolhidas como alvo de efeitos ou são imunes à maioria dos efeitos. Portanto, essas cartas geralmente não devem ser escolhidas como alvo na maioria das vezes.
+
+Aqui estão algumas observações sobre as cartas listadas:
+
+Divine Serpent Geh (82103466): Uma carta que não pode ser escolhida como alvo por efeitos.
+
+Obelisk the Tormentor (10000000): Um dos deuses egípcios, imune à maioria dos efeitos e não pode ser escolhido como alvo.
+
+The Winged Dragon of Ra - Sphere Mode (10000080): Uma forma especial de The Winged Dragon of Ra, imune à maioria dos efeitos e não pode ser escolhido como alvo.
+
+The Winged Dragon of Ra - Immortal Phoenix (10000090): Outra forma especial de The Winged Dragon of Ra, imune à maioria dos efeitos e não pode ser escolhido como alvo.
+
+Kozmo Dark Planet (85991529): Uma carta Kozmo que não pode ser escolhida como alvo por efeitos.
+
+Zushin, the Sleeping Giant (67547370): Uma carta que não pode ser destruída em batalha e não pode ser escolhida como alvo por efeitos.
+
+The Legendary Exodia Incarnate (58604027): Uma encarnação especial de Exodia que não pode ser escolhida como alvo por efeitos.
+
+Kozmo Dark Eclipser (64063868): Outra carta Kozmo que não pode ser escolhida como alvo por efeitos.
+
+Kozmo Dark Destroyer (55885348): Uma carta Kozmo que não pode ser escolhida como alvo por efeitos.
+
+Kozmo Forerunner (20849090): Outra carta Kozmo que não pode ser escolhida como alvo por efeitos.

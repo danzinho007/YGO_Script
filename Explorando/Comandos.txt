@@ -1,0 +1,37 @@
+Comando: ,commands
+
+,card <query> - Find cards by name. Supports fuzzy matching.
+,cdb <query> - Get a link to a card's BabelCDB database file.
+,id <query> - Get a card's name and ID (passcode).
+,limits <query> - Check a card's limit status across all applicable banlists.
+,rawvals <query> - Get a card's raw database values.
+,rulings <query> - Get links to a card's ruling page(s).
+,script <query> - Get a link to a card's script in the CardScript repo.
+,search <query> - Find cards by name or text. Case-insensitive, partial matches allowed.
+,strfind <query> - Search card database strings. Case-insensitive, partial matches allowed.
+,strings <query> - Get a card's database strings.
+ 
+,constant <query> - Find constants by name. Case-insensitive, partial matches allowed.
+,enum <query> - Find enums by name. Case-insensitive, partial matches allowed.
+,function <query> - Find functions by name. Case-insensitive, partial matches allowed.
+,namespace <query> - Find namespaces by name. Case-insensitive, partial matches allowed.
+,tag <query> - Find tags by name. Case-insensitive, partial matches allowed.
+,type <query> - Find types by name. Case-insensitive, partial matches allowed.
+,constantval <query> - Find constants by value. Number values must be exact.
+,enumbits <value> <enum-name?> - See which constants in a bit enum (except Archetype) make up an integer value.
+,progress - View the current progress of API documentation.
+,archetype <query> - See which archetypes make up an integer value, or search archetype strings (setnames) by name. Case-insensitive, partial matches allowed.
+
+,counter <query> - Find counters by name or value. Case-insensitive, partial matches allowed.
+,systrings <query> -  Find system strings by name or value. Case-insensitive, partial matches allowed.
+,victory <query> - Find victory strings (alternate win conditions) by name or value. Case-insensitive, partial matches allowed.
+,about - Get information about the bot.
+,commands - Get a list of all commands.
+,help - Display a basic help message.
+,ping - Check the bot's response time.
+??? ,claim - View and claim cards in open Greenlight issues.
+??? ,stage <cdb-name> - Prepare a .cdb file with selected cards from Greenlight.
+??? ,removepics <ydke|id1> <ydke2|id2?> <ydke3|id3?...> - Remove reuploaded card pic urls from pics.json.
+
+???,update - Manually update the bot's data.
+??? ,version - Check the bot's deployed version.

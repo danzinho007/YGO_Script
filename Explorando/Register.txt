@@ -1,0 +1,23 @@
+Comando: .c register 
+
+[01]  1 | REGISTER_FLAG_DETACH_XMAT
+[02]  2 | REGISTER_FLAG_CARDIAN
+[03]  4 | REGISTER_FLAG_THUNDRA
+[04]  8 | REGISTER_FLAG_ALLURE_LVUP
+[05] 16 | REGISTER_FLAG_TELLAR
+[06] 32 | REGISTER_FLAG_DRAGON_RULER
+
+Comando: .f register
+
+[01] effect | Arcana.RegisterCoinResult(Card c, int coin)
+[02]   bool | aux.EquipByEffectAndLimitRegister(Card c, Effect e)
+[03]   void | aux.RegisterClientHint(Card c, int property_code, int reg.player, int s, int o, str, int reset_code, int ct)
+[04]   bool | Card.EquipByEffectAndLimitRegister(Card c, Effect e)
+
+[05]    int | Card.RegisterEffect(Card c, Effect e[, bool forced=false, ...])
+Registers an Effect (Effect e) (usually an Effect created with Effect.CreateEffect()) to a Card (Card c), ... is a list of integers which Registers further effects in the utility. 
+
+[06]    int | Card.RegisterEffectRush(Card c)
+[07] Effect | Card.RegisterFlagEffect(Card c, int code, int reset_flag, int property, int reset_count[, int label, int desc])
+[08]   void | Duel.RegisterEffect(Effect e, int player)
+[09] Effect | Duel.RegisterFlagEffect(int player, int code, int reset_flag, int property, int reset_count[, int label = 0])

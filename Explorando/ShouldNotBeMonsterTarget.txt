@@ -1,0 +1,21 @@
+O trecho de código fornecido é uma enumeração em C# chamada ShouldNotBeMonsterTarget, que lista cartas que não podem ser selecionadas como alvo de efeitos de monstros, ou são imunes a esses efeitos. Portanto, essas cartas geralmente não devem ser escolhidas como alvo dos efeitos de monstros na maioria das vezes.
+
+Aqui estão algumas observações sobre as cartas listadas:
+
+The Legendary Fisherman II (19801646): Uma versão avançada de The Legendary Fisherman, conhecido por sua proteção contra efeitos de monstros.
+
+Gaia Drake, the Universal Force (58601383): Monstro Sincro imune a efeitos de monstros.
+
+First of the Dragons (10817524): Monstro Fusão que é imune a efeitos de monstros normais.
+
+Tatsunoko (55863245): Monstro Sincro que é imune a efeitos de monstros durante a Fase de Dano.
+
+CXyz Simon the Great Moral Leader (41147577): Monstro Xyz que é imune a efeitos de monstros que escolhem alvos.
+
+Paleozoic Anomalocaris (61307542): Uma carta do tipo Paleozoico que não pode ser alvo de efeitos de monstros.
+
+Paleozoic Opabinia (37649320): Outra carta do tipo Paleozoico que não pode ser alvo de efeitos de monstros.
+
+Borreload Dragon (31833038): Monstro Link que tem a capacidade de absorver monstros e é imune a seus efeitos.
+
+Borrelend Dragon (98630720): Evolução de Borreload Dragon, também imune a efeitos de monstros.

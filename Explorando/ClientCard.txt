@@ -1,0 +1,54 @@
+A classe ClientCard parece ser uma representação de uma carta no contexto de um jogo de cartas, possivelmente associado ao Yu-Gi-Oh! Trading Card Game ou a um jogo similar. Vamos analisar os membros da classe:
+
+Propriedades Básicas:
+
+Id: Identificador único da carta.
+Data: Instância de NamedCard que contém informações detalhadas sobre a carta.
+Name: Nome da carta.
+Position: Posição da carta (Ataque, Defesa, etc.).
+Sequence: Sequência da carta (uma posição específica no campo).
+Location: Localização da carta (Mão, Campo, Cemitério, etc.).
+Alias: Código alternativo para a carta (caso exista).
+Level: Nível da carta.
+Rank: Nível da carta para Monstros Xyz.
+Type: Tipo da carta (Monstro, Mágica, Armadilha).
+Attribute: Atributo da carta (Terra, Água, Fogo, etc.).
+Race: Raça da carta (Dragão, Máquina, Fada, etc.).
+Attack: Valor de ataque da carta.
+Defense: Valor de defesa da carta.
+LScale: Escala da Magia-Pêndulo no lado esquerdo.
+RScale: Escala da Magia-Pêndulo no lado direito.
+LinkCount: Número de setas de Link da carta (para Monstros Link).
+LinkMarker: Máscara de setas de Link da carta (para Monstros Link).
+BaseAttack: Valor base de ataque da carta.
+BaseDefense: Valor base de defesa da carta.
+RealPower: Poder real da carta (pode ser ajustado dinamicamente).
+Overlays: Lista de cartas sobrepostas (usado para Monstros Xyz).
+Owner: Identificador do proprietário da carta.
+Controller: Identificador do controlador da carta.
+Disabled: Indica se a carta está desabilitada.
+ProcCompleted: Indica se algum processo relacionado à carta foi concluído.
+SelectSeq: Sequência de seleção associada à carta.
+OpParam1 e OpParam2: Parâmetros de operação associados à carta.
+Listas de Cartas Associadas:
+
+EquipCards: Lista de cartas equipadas a esta carta.
+OwnTargets: Lista de cartas que são alvos desta carta.
+TargetCards: Lista de cartas que esta carta está alvejando.
+Sinalizadores e Estados da Carta:
+
+CanDirectAttack: Indica se a carta pode atacar diretamente.
+ShouldDirectAttack: Indica se a carta deve atacar diretamente.
+Attacked: Indica se a carta foi atacada.
+IsLastAttacker: Indica se a carta foi o último atacante.
+IsSpecialSummoned: Indica se a carta foi Invocada Especialmente.
+Ações e Índices de Ação:
+
+ActionIndex: Índices associados a ações realizadas com a carta.
+ActionActivateIndex: Dicionário que mapeia identificadores de ativação de ações para índices.
+Métodos Úteis:
+
+Update(BinaryReader packet, Duel duel): Atualiza as propriedades da carta com base em dados recebidos.
+ClearCardTargets(): Limpa as listas de cartas alvo associadas a esta carta.
+Métodos como HasLinkMarker, HasType, HasPosition, HasAttribute, HasRace, HasSetcode, IsMonster, IsSpell, IsTrap, etc., para verificar características e tipos específicos da carta.
+Métodos para verificar se a carta pode ser revivida, se tem Material Xyz, se é faceup, etc.

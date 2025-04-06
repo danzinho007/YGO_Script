@@ -1,0 +1,31 @@
+Outros :
+
+e1:SetCode(EFFECT_SELF_DESTROY)
+Define o código do efeito como "Destruir a si mesmo".
+
+e1:SetCondition(function(e) return Duel.IsExistingMatchingCard(aux.FaceupFilter(Card.IsAttributeExcept,ATTRIBUTE_LIGHT),e:GetHandlerPlayer(),LOCATION_MZONE,0,1,nil) end)
+Define a condição para ativar o efeito. Neste caso, a carta se destruirá se o controlador dela possuir um monstro não do Atributo LUZ (non-LIGHT) no campo.
+
+e1:SetCountLimit(1,id,EFFECT_COUNT_CODE_DUEL)
+Define o limite de uso do efeito para 1 vez, usando o ID da carta e um código de contagem específico para duelos.
+
+e1:SetDescription(aux.Stringid(id,0)
+Define a descrição do efeito utilizando uma string de texto associada ao ID da carta.
+
+e1:SetProperty(EFFECT_FLAG_SINGLE_RANGE)
+Define a propriedade do efeito como "Efeito de Alcance Único".
+
+e1:SetRange(LOCATION_MZONE)
+Onde o efeito é aplicado
+
+e1:SetTargetRange(LOCATION_HAND,0)
+Pode ser ativado da mão
+
+e1:SetValue(-2)
+Diminuir o valor em -2
+
+s.listed_names={CARD_BLUEEYES_W_DRAGON}
+Monstro que vai ser invocado 
+
+s.material_setcode=SET_BLUE_EYES
+Lista de materiais pra invocação

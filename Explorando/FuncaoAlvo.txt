@@ -1,0 +1,133 @@
+--Função alvo
+--Verificar o efeito
+function s.target(e,tp,eg,ep,ev,re,r,rp,chk)
+--Verifica se o efeito pode ser ativado
+    if chk==0 then
+        local 
+        return
+    end
+--Prepara pra ativação
+    Duel.SetOperationInfo()
+end
+
+[01] Group | Card.GetLinkedGroup(Card c)
+[02]   int | Card.GetLinkedGroupCount(Card c)
+[03]   int | Card.GetLinkedZone(Card c[, int cp = c:GetControler()])
+[04] Group | Duel.GetLinkedGroup(int player, int location1, int location2)
+[05]   int | Duel.GetLinkedGroupCount(int player, int location1, int location2)
+[06]   int | Duel.GetLinkedZone(int player)
+[07]   int | Group.GetLinkedZone(Group g, int cp)
+
+
+--Exemplo_01: Link Aranha
+--Monstro Efeito Link 1 Terra Ciberso
+--Link 1, seta pra baixo, 1 monstro normal
+--Fase Principal : 1x por turno você pode fazer invocação especial de Lv 4 normal da mão para a zona que está apontada essa carta
+
+function s.target(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk== 0 then
+		local zone=e:GetHandler():GetLinkedZone(tp)
+		return zone~= and Duel.IsExistingMatchingCard(s.filter,tp,LOCATION_HAND,0,1,nil,e,tp,zone)
+	end
+	Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,nil,1,tp,LOCATION_HAND)
+end
+
+Explicação do Exemplo 01:
+function s.target(e,tp,eg,ep,ev,re,r,rp,chk)
+-e → o efeito
+-tp → o jogador que ativa o efeito
+-chkc → se o efeito for reativado automaticamente (por exemplo, numa cadeia ou efeito contínuo), este é o card candidato a ser o alvo
+-chk → verificação de condição: se for 0, o jogo está perguntando “é possível ativar isso?”.
+    if chk==0 then
+--Verifica se o efeito pode ser ativado
+        local zone=e:GetHandler():GetLinkedZone(tp)
+--Obtém as zonas para onde Link Spider aponta:
+--Serve pra que ocorra somente em zona válida
+        return zone~=0 and Duel.IsExistingMatchingCard(s.filter,tp,LOCATION_HAND,0,1,nil,e,tp,zone)
+    --end
+--O efeito só pode ser ativado se:
+--Há zonas disponíveis para invocação.
+--Há um monstro Normal de nível 4 ou menor na mão
+--ou
+--Duel.IsExistingMatchingCard:
+--s.filter,   -- função filtro
+--tp,         -- jogador que está checando (normalmente você)
+--LOCATION_HAND, -- checa cartas na mão
+--0,          -- não checa o oponente
+--1,          -- número mínimo que precisa encontrar
+--nil,        -- nenhum grupo específico
+--e,tp,zone   -- parâmetros extras passados pro filtro)
+
+    Duel.SetTargetPlayer(tp)
+    Duel.SetTargetParam(1)
+	Duel.SetOperationInfo(0,CATEGORY_DRAW,nil,0,tp,1)
+    Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,nil,1,tp,LOCATION_HAND)
+É uma função que registra o que a operação do efeito vai fazer. Não executa ainda — só informa.
+0 
+Grupo do efeito (sempre 0 para efeitos simples)
+CATEGORY_SPECIAL_SUMMON	
+Categoria do que o efeito faz: aqui, é uma Invocação Especial
+--nil	
+Nenhum alvo direto definido ainda (vai ser escolhido depois)	
+--1	
+A quantidade de cartas que será invocada (no máximo)
+player	
+--tp
+O jogador que realiza a invocação (tp = "turn player")
+--LOCATION_HAND	
+Indica que a carta virá da mão do jogador
+
+Resumo:
+--Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,nil,1,tp,LOCATION_HAND)
+É uma função que registra o que a operação do efeito vai fazer. Não executa ainda — só informa.
+0 
+Grupo do efeito (sempre 0 para efeitos simples)
+CATEGORY_SPECIAL_SUMMON	
+Categoria do que o efeito faz: aqui, é uma Invocação Especial
+nil	
+Nenhum alvo direto definido ainda (vai ser escolhido depois)	
+1	
+A quantidade de cartas que será invocada (no máximo)
+player	
+tp
+O jogador que realiza a invocação (tp = "turn player")
+--LOCATION_HAND	
+Indica que a carta virá da mão do jogador
+
+
+Exemplo 02:
+function s.target(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
+    if chkc then return chkc:IsControler(tp) and chkc:IsLocation(LOCATION_MZONE) and s.filter(chkc) end
+    if chk==0 then return Duel.IsExistingTarget(s.filter,tp,LOCATION_MZONE,0,1,nil) end
+    Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FACEUP)
+    Duel.SelectTarget(tp,s.filter,tp,LOCATION_MZONE,0,1,1,nil)
+end
+
+Explicação do Exemplo 02:
+    if chkc then return chkc:IsControler(tp) and chkc:IsLocation(LOCATION_MZONE) and s.filter(chkc) end
+"Só permita como alvo se for um monstro seu no campo e que passe no filtro"
+    if chk==0 then return Duel.IsExistingTarget(s.filter,tp,LOCATION_MZONE,0,1,nil) end
+"É possível ativar esse efeito? Existe ao menos 1 monstro válido no meu campo que passa no filtro?"
+    Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_FACEUP)
+    Duel.SelectTarget(tp,s.filter,tp,LOCATION_MZONE,0,1,1,nil)
+Exibem uma mensagem ao jogador dizendo para selecionar um monstro com a face para cima.
+Permitem ao jogador escolher 1 monstro no campo que satisfaça o s.filter.
+
+=============================
+Exemplo 04: 
+Pot of Greed / Magia normal
+Efeito: Compre 2 cartas
+
+function s.target(e,tp,eg,ep,ev,re,r,rp,chk)
+    if chk==0 then return Duel.IsPlayerCanDraw(tp,2) end
+    Duel.SetTargetPlayer(tp)
+    Duel.SetTargetParam(2)
+    Duel.SetOperationInfo(0,CATEGORY_DRAW,nil,0,tp,2)
+end
+
+Explicação:
+1-Checa se o jogador (tp) pode tirar 2 cartas do seu Deck
+Se fosse (1-tp,2) seria se o oponente pode tirar 2 cartas do Deck
+
+=======================================================
+Exemplo 05:

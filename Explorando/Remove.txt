@@ -1,0 +1,35 @@
+Comando: .c remove
+
+[01]     0x20 | LOCATION_REMOVED
+[02]  0x80000 | RESET_REMOVE
+[03] 0x100000 | RESET_TEMP_REMOVE
+[04]       64 | EFFECT_REMOVE_REDIRECT
+[05]       67 | EFFECT_CANNOT_REMOVE
+[06]      116 | EFFECT_REMOVE_TYPE
+[07]      118 | EFFECT_REMOVE_CODE
+[08]      121 | EFFECT_REMOVE_RACE
+[09]      126 | EFFECT_REMOVE_ATTRIBUTE
+[10]      245 | EFFECT_OVERLAY_REMOVE_REPLACE
+[11]     295 | EFFECT_REMOVE_BRAINWASHING
+[12]     349 | EFFECT_REMOVE_SETCODE
+[13]     424 | EFFECT_REMOVE_LINKMARKER
+[14]    1011 | EVENT_REMOVE
+[15] 0x20000 | EVENT_REMOVE_COUNTER
+[16]     0x4 | CATEGORY_REMOVE
+[17]     203 | HINT_SKILL_REMOVE
+[18]       7 | CHINT_DESC_REMOVE
+[19]       7 | PHINT_DESC_REMOVE
+[20]     503 | HINTMSG_REMOVE
+[21]      519 | HINTMSG_REMOVEXYZ
+[22] 0x100000 | TIMING_REMOVE
+
+===================================
+Comando: .f remove
+
+[01] bool | Card.CheckRemoveOverlayCard(Card c, int player, int count, int reason)
+
+[02]  int | Card.RemoveOverlayCard(Card c, int player, int min, int max, int reason)
+Makes player (int Player) remove overlay cards from a Card (Card c), with minimum of (int min) and maximum of (int max) with (int reason) as reason. Returns the number of cards removed 
+
+[03] bool | Duel.CheckRemoveOverlayCard(int player, int s, int o, int count, int reason[, Group ocard])
+[04]  int | Duel.RemoveOverlayCard(int player, int s, int o, int min, int max, int reason[, Group rg])

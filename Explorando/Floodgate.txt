@@ -1,0 +1,23 @@
+O trecho de código fornecido é outra enumeração em C# chamada Floodgate, que enumera cartas específicas que são consideradas "floodgates". No contexto do Yu-Gi-Oh!, as floodgates são cartas que restringem ou dificultam a realização de certas ações pelo jogador. Essas cartas muitas vezes têm efeitos contínuos que afetam o jogo de maneira significativa.
+
+Aqui estão algumas observações sobre as cartas listadas:
+
+Barriers Statues (Torrent, Drought, Heavens, Inferno, Stormwinds, Abyss): Cada uma dessas cartas representa uma Barriers Statue que impede a invocação de monstros de um tipo específico.
+
+Thunder King Rai-Oh (71564252): Impede a busca de cartas e tem uma habilidade adicional para negar invocações especiais.
+
+Fossil Dyna Pachycephalo (42009836): Impede a invocação de monstros especiais enquanto está no campo.
+
+Vanity's Fiend (47084486): Impede a invocação de monstros especiais pelos jogadores.
+
+Majesty's Fiend (33746252): Semelhante ao Vanity's Fiend, impede a invocação de monstros especiais.
+
+Vanity's Ruler (72634965): Restringe a invocação de monstros de nível 5 ou mais.
+
+Kycoo the Ghost Destroyer (88240808): Impede o jogador de banir cartas do cemitério.
+
+Consecrated Light (2980764): Impede a invocação de monstros das trevas.
+
+Archlord Kristya (59509952): Pode ser invocado facilmente e impede a invocação especial, a menos que o jogador tenha exatamente 4 monstros na mão e no cemitério.
+
+Koaki Meiru Drago (12435193): Impede a ativação de efeitos de monstros que não sejam de pedra.

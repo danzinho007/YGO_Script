@@ -1,0 +1,63 @@
+Aprendendo:
+
+KillerxG (BL4ZE)
+https://www.youtube.com/watch?v=FmHWLcDQiV8 = Criei a carta 
+https://www.youtube.com/watch?v=uFkOkA71xz4 = Vendo 
+TCG Editor
+
+Yu-Gi-Oh Card Maker
+https://ygopro.org/yugioh-card-maker/
+
+--Nome em Japones
+--Nome em Ingles 
+--Se essa carta é normal ou especial sumonada
+--Você pode comprar 1 carta
+local =s,id=GetID()
+function s.initial_effect(c)
+--(1)Draw 1 card
+    local e2=Effect.Create.Effect(c)
+    e2:SetDescription(aux.StringId(id,0))
+--Puxar carta
+    e2:SetCategory(CATEGORY_DRAW)
+--Efeito da sua carta + Efeito que precisa ser ativado
+    e2:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
+--Se a carta for invocada
+    e2:SetProperty(EFFECT_FLAG_DELAY)
+--Invocar normalmente:
+    e2:SetCode(EVENT_SUMMON_SUCESS)
+--Uma vez por nome:
+    e2:SetCountLimit(1,id)
+--Puxando a funcao s.drtg:
+    e2:SetTarget(s.drtg)
+--Puxando a funcao s.drop:
+    e2:SetOperation(s.drop)
+--Finalizando tudo:
+    c:RegisterEffect(e2)
+    local e3=e2:Clone()
+--Invocar especialmente:
+    e3:SetCode(EVENT_SPSUMMON_SUCESS)
+    c:RegisterEffect
+end
+--(1)Draw 1 card
+function s.drtg(e,tp,eg,ep,ev,re,r,rp,chk)
+    if chk==0 then return Duel.IsPlayerCanDraw(tp,1) end
+    Duel.SetTargetPlayer(tp)
+    Duel.SetTargetParam(1)
+    Duel.SetOperationInfo(0,CATEGORY_DRAW,nil,0,tp,1)
+end
+function s.drop(e,tp,eg,ep,ev,re,r,rp)
+    local p,d=Duel.GetChainInfo(0,CHAININFO_TARGET_PLAYER,CHAININFO_TARGET_PARAM)
+    Duel.Draw(p,d,REASON_EFFECT)
+end
+
+
+--My Rules
+--Active this card at the start of the duel.
+--Adiciona até 10 cartas na sua mão de qualquer lugar
+--Compra 2 cartas
+--Envia até 10 cartas pro cemitério de qualquer lugar
+--Embaralha 2 cartas no baralho de qualquer lugar
+--Escolha 1 monstro virado pra cima que você controla, dê o controle dele até a fase final do turno
+--Você pode conduzir qualquer normal/enviar quiser nesse turno, não apenas 1
+--Você pode escolher até 10 cartas no campo e destruir elas
+--Você pode ativar cartas armadilha no turno que isso é enviado

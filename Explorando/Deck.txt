@@ -1,0 +1,24 @@
+Este trecho de código em C# define uma classe chamada Deck que representa um deck de cartas em um jogo. Vou explicar as principais funcionalidades dessa classe:
+
+Propriedades:
+
+Cards: Uma lista de inteiros que representa as cartas principais do deck.
+ExtraCards: Uma lista de inteiros que representa as cartas adicionais (extra deck) do deck.
+SideCards: Uma lista de inteiros que representa as cartas do side deck (cartas adicionadas temporariamente para ajustes entre duelos).
+Método Construtor:
+
+Inicializa as listas de cartas principais (Cards), cartas adicionais (ExtraCards), e cartas do side deck (SideCards).
+Método AddNewCard:
+
+Adiciona uma nova carta ao deck, com base no ID da carta fornecido.
+A decisão de adicionar a carta ao main deck (mainDeck), ao extra deck (sideDeck), ou ao side deck (sideDeck) é feita com base nos parâmetros booleanos passados.
+Método Estático Load:
+
+Carrega um deck a partir de um arquivo YDK (formato de deck usado no jogo Yu-Gi-Oh!).
+O caminho do arquivo YDK é construído combinando o caminho para os recursos do programa (Program.AssetPath) e o nome do deck fornecido.
+O método lê o conteúdo do arquivo, interpretando as seções de cartas principais, cartas adicionais e side deck.
+As cartas lidas são adicionadas ao objeto Deck utilizando o método AddNewCard.
+Tratamento de Exceções:
+
+Se ocorrer uma exceção durante o processo de leitura ou construção do deck, o método retorna null.
+O bloco try cria um objeto StreamReader para ler o arquivo YDK e fecha-o no bloco finally para garantir que o recurso seja liberado.

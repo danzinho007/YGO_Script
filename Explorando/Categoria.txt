@@ -1,0 +1,210 @@
+﻿Categoria da carta:
+
+Armadilha
+Monstro Efeito XYZ
+Monstro Efeito Link 
+
+===============
+Atributo da carta:
+
+Terra 
+
+============
+Tipo de carta:
+
+Ciberso
+Dragão
+
+==================================
+comando:  .c Category
+--O que a carta faz
+	e1:SetCategory()
+
+	CATEGORY_DESTROY
+
+	CATEGORY_DRAW
+Comprar carta
+Exemplo: Mag-Pot of Greed ( Compre 2 cartas )
+
+[02]   0x2 | CATEGORY_RELEASE
+[03]   0x4 | CATEGORY_REMOVE
+[04]   0x8 | CATEGORY_TOHAND
+Mão para o Cemitério
+
+[05]  0x10 | CATEGORY_TODECK
+[06]  0x20 | CATEGORY_TOGRAVE
+[07]  0x40 | CATEGORY_DECKDES
+[08]  0x80 | CATEGORY_HANDES
+
+[09] 0x100 | CATEGORY_SUMMON
+xxxxx
+
+[10] 0x200 | CATEGORY_SPECIAL_SUMMON
+Especial Invoca da/o Mão/Removidas/Deck/Cemitério para o campo 
+Exemplo: Link 1 Aranha Atq1000
+1 monstro normal
+Uma vez por turno: pode invocar por Invocacao Especial 1 monstro normal de nivel 4 ou menor da mao para uma zona a qual este card apontar
+
+[11]   0x400 | CATEGORY_TOKEN
+[12]   0x800 | CATEGORY_FLIP
+[13]  0x1000 | CATEGORY_POSITION
+[14]  0x2000 | CATEGORY_CONTROL
+[15]  0x4000 | CATEGORY_DISABLE
+[16]  0x8000 | CATEGORY_DISABLE_SUMMON
+
+
+
+[18] 0x20000 | CATEGORY_SEARCH
+[19] 0x40000 | CATEGORY_EQUIP
+[20] 0x80000 | CATEGORY_DAMAGE
+[21]   0x100000 | CATEGORY_RECOVER
+[22]   0x200000 | CATEGORY_ATKCHANGE
+[23]   0x400000 | CATEGORY_DEFCHANGE
+[24]   0x800000 | CATEGORY_COUNTER
+[25]  0x1000000 | CATEGORY_COIN
+[26]  0x2000000 | CATEGORY_DICE
+[27]  0x4000000 | CATEGORY_LEAVE_GRAVE
+[28]  0x8000000 | CATEGORY_LVCHANGE
+[29] 0x10000000 | CATEGORY_NEGATE
+[30] 0x20000000 | CATEGORY_ANNOUNCE
+[31] 0x40000000 | CATEGORY_FUSION_SUMMON
+[32] 0x80000000 | CATEGORY_TOEXTRA
+
+
+[52]   0x1 | EFFECT_TYPE_SINGLE
+Efeito único
+Ex : Thunder Nyan Nyan
+
+[53]   0x2 | EFFECT_TYPE_FIELD
+Checa o campo antes de ativar
+Ex : Condemned Maiden
+
+[54]   0x4 | EFFECT_TYPE_EQUIP
+Carta Tipo Equipamento
+
+[55]   0x8 | EFFECT_TYPE_ACTIONS
+
+[57]  0x20 | EFFECT_TYPE_FLIP
+
+[58]  0x40 | 
+Exemplo: Link 1 Aranha Atq1000
+1 monstro normal
+Uma vez por turno: pode invocar por Invocacao-Especial 1 monstro normal de nivel 4 ou menor da mao para uma zona a qual este card apontar
+
+[59]  0x80 | EFFECT_TYPE_TRIGGER_O
+Verificar se pode efetuar a invocação
+
+[60] 0x100 | EFFECT_TYPE_QUICK_O
+Pode ser ativado no mesmo turno que é colocado no campo
+
+[01] 0x10 | EFFECT_FLAG_CARD_TARGET
+The effect includes targeting a card
+ 
+EFFECT_FLAG_DELAY
+Se ela for invocada 
+Quando remove isso, fica : Quando ela é invocada
+
+=================================
+Comando: .c effect
+--Tipo de carta:
+--Efeito da carta
+--Ver Categoria > Tipo
+	e1:SetType(Ver e1:SetType)
+
+--EFFECT_TYPE_ACTIVATE
+Jogador precisa ativar
+Exemplo: 
+
+--EFFECT_TYPE_FLIP
+Carta de virar
+Exemplo: 
+
+--EFFECT_TYPE_IGNITION
+Um efeito que o jogador do turno escolhe aplicar durante sua Main Phase, em um estado de jogo aberto. É Speed ​​Spell 1 ( Precisa clicar pra ativar )
+Exemplo: Link Aranha
+
+--EFFECT_TYPE_SINGLE
+Sua própria carta
+
+EFFECT_TYPE_TRIGGER_F
+Ativa automaticamente a carta
+
+EFFECT_TYPE_TRIGGER_O
+Quando ativada abre uma janela que pergunta se a pessoa quer ativar
+
+======================
+Comando: .c property 
+Alvo no campo:
+Escolhe 1 carta pra fazer algo
+    e1:SetProperty()
+
+[01]   0x1 | EFFECT_FLAG_INITIAL
+[02]   0x2 | EFFECT_FLAG_FUNC_VALUE
+[03]   0x4 | EFFECT_FLAG_COUNT_LIMIT
+[04]   0x8 | EFFECT_FLAG_FIELD_ONLY
+
+    EFFECT_FLAG_CARD_TARGET
+Escolhe 1 carta pra fazer algo
+Ex: Tirago Bebe escolhe 1 monstro pra atacar diretamente
+
+    EFFECT_FLAG_PLAYER_TARGET
+Efeito escolhe 1 jogador
+Exemplo: Arm-Jar of Greed mira no jogador pra comprar a carta
+
+[06]  0x20 | EFFECT_FLAG_IGNORE_RANGE
+[07]  0x40 | EFFECT_FLAG_ABSOLUTE_TARGET
+[08]  0x80 | EFFECT_FLAG_IGNORE_IMMUNE
+[09] 0x100 | EFFECT_FLAG_SET_AVAILABLE
+[10] 0x200 | EFFECT_FLAG_CANNOT_NEGATE
+
+==========================
+Comando: .c location
+--Alcance da carta:
+--Vai invocar em qual lugar do campo ?
+	e1:SetRange()
+
+[01]  0x1 | LOCATION_DECK
+
+[02]  0x2 | LOCATION_HAND
+Precisa ser ativada na mão
+
+[03]  0x4 | LOCATION_MZONE
+Precisa ser ativada no campo
+Ex: Link Aranha invoca pro campo
+Ex: Tiragon Bebe escolhe 1 monstro no campo
+
+[04]  0x8 | LOCATION_SZONE
+[05] 0x10 | LOCATION_GRAVE
+[06] 0x20 | LOCATION_REMOVED
+[07] 0x40 | LOCATION_EXTRA
+[08] 0x80 | LOCATION_OVERLAY
+[09] 0x0c | LOCATION_ONFIELD
+[10] 0x3c | LOCATION_PUBLIC
+
+[11]   0x3ff | LOCATION_ALL
+[12] 0x10001 | LOCATION_DECKBOT
+[13] 0x20001 | LOCATION_DECKSHF
+[14]   0x100 | LOCATION_FZONE
+[15]   0x200 | LOCATION_PZONE
+[16]   0x400 | LOCATION_STZONE
+[17]   0x800 | LOCATION_MMZONE
+[18]  0x1000 | LOCATION_EMZONE
+[19]     0x1 | LOCATION_REASON_TOFIELD
+[20]     0x2 | LOCATION_REASON_CONTROL
+
+[21]        0x4 | LOCATION_REASON_COUNT
+[22]          4 | CHAININFO_TRIGGERING_LOCATION
+[23]          5 | CHAININFO_TRIGGERING_LOCATION_SYMBOLIC
+[24]         27 | CHAININFO_TRIGGERING_SUMMON_LOCATION
+[25] 0x40000000 | EFFECT_FLAG2_FORCE_ACTIVATE_LOCATION
+[26]    0x20000 | DUEL_TRIGGER_ONLY_IN_LOCATION
+
+============================
+	e1:SetCode(EVENT_FREE_CHAIN)
+Exemplo:Arm-Jar of Greed
+		Mag-Pot of Greed
+
+=====================================
+	e1:SetCountLimit(1)
+Exemplo:Link-Link_Aranha
+		XYZ-Tiragon_Bebe
