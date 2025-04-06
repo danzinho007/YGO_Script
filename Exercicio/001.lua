@@ -1,0 +1,4 @@
+--Exemplo_01: Link Aranha
+--Monstro Efeito Link 1 Terra Ciberso
+--Link 1, seta pra baixo, 1 monstro normal
+--Fase Principal : 1x por turno você pode fazer invocação especial de Lv 4 normal da mão para a zona que está apontada essa carta

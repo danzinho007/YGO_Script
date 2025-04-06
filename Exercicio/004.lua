@@ -1,0 +1,3 @@
+--Pot of Greed
+--Magia normal
+--Compre 2 cartas

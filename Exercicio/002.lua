@@ -1,0 +1,5 @@
+--Modelo Raiz:
+--Nome em Japones / Inglês / Tiragon Bebê
+--Monstro Efeito XYZ Terra Dragão
+--3 monstros de nível 1
+--Efeito: Durante sua Fase Principal 1: Você pode desassociar 1 matéria xyz desta carta e depois escolher 1 monstro nível 1 que você controle, ele pode atacar diretamente o oponente
