@@ -1,23 +1,324 @@
 Decks:
-1= Deck_Aichi(3)
-2= Deck_Aichi(6)
-5= Deck_Aichi(9) OK
+1 Floga = Deck_Aichi(3)
+2 BattleSisterCocoa = Deck_Aichi(6)
+3-Abyss Freezer
+4-Abyss Healer
+5 DarksideTrumpeter = Deck_Aichi(9)
+6-Kung Fu
 7 Fulbau= Deck_Conhecidas (3) OK
+8-GrimReaper = 
+9 Phantom
+
+10-Zappabau =
+11-Apocalypse Bat 
 12 BlasterJavelin= Deck_Conhecidas (6) OK
+13-Black Sage = Conhecida
+14-Darkside Pegasus = Conhecida
+15-Dark Shield Mc Lir
+16-Doranbau
+17-Gururubau
+18-Nightmare Painter
+19-Witch of Nostrum Arianhard
+
 20 BlasterDark= Deck_Conhecidas (9) OK
+21-Cursed Lancer
+22-Knight of Darkness
+23-Darkness Maiden
+24-Demon World Donner
+25-Demon World Fatalita
+26-Knight of Fighting
+27-Knight of Nullity
+28-Moonlight Witch Vaha
+29-Skull Witch Nemain
+
+30-Triple Dark Armor
+31-Dark Mage Badhabh
+32-Dark Metal Dragon
+33-Silver Spear Demon Gusion
+34-Knight of Purgatory Skull Face
+35-Phantom Blaster Dragon
 36 PhantomBlasterOverlord= Deck_Conhecidas (12) OK
+36-Phantom Blaster Overlord = Conhecida
+37-Origin Mage Ildona
+38-The Dark Dictactor
+39-Awaking Dragonfly
+
+040-Larva Mutant Giraffa
+041-Machining (Aranha)
+042-Madame Mirage (Abelha)
+043-Medical Battler
+044-MegaColony Battler A
+045-MegaColony
+046-Raider Mantis
+047-Sharp Nail
+048-Shelter Beetle
+049-Sonic Cicada
+
+050-Gloom Flyman
+051-Karma Queen (Abelha)
+052-Machining
+053-Machining Mosquito
+054-MegaColony Battler B
+055-Paralyze
+056-Pest Professor
+057-Phantom Black
+058-Pupa Mutant
+059-Stealth
+
+60-Toxic Soldier
+61-Bloody Hercules
+62-Elite Mutant Giraffa
+63-Ironcutter Beetle
+64-Iron Fist Roly Poly
+65-Lady Bomb
+66-Machining Mantis
+67-Tail Joe
+68-Toxic Trooper
+69-Transmutated Thief Steal Spider
+
+070-Water Gang
+071-Bewitching Officer Lady Butterfly = Conhecida
+072-Death Warden Ant Lion
+073-Evil Armor General
+074-Hell Spider
+075-Machining Stag Beetle
+077-Master Fraude
+078-Martial Arts Mutant
+079-Master Fraude = Importante
+
+80-Dolphin Soldier (Golfinho)
+81-Enemy Seeking Seagull
+82-Medical Officer (enfermeira) = Importante
+83-Officer Cadet Erick
+84-Officer Cadet of the First
+85-Officer Communications
+86-Pyroxene
+87-Accelerated
+88-Battle Siren Cynthia
+89-Battle Siren Dorothea
+
+090-Splash Assault
+091-Tear Knight Cyprus
+092-Tear Knight Thee
+093-Coral Assault = 
+094-Marine = Conhecida
+095-Titan of the Infinite Trench
+096-Storm Rider Basil
+097-Tear Knight Lazarus
+098-Blue Storm Dragon
+099-Marine General
+
+100-Hydro Hurricane Dragon
+101-Navalgazer Dragon
+102-Storm Rider Diamantes
+103-Key Anchor
+104-Battleraizer (Robo) = Conhecida 
+105-Deat Deity White Tiger
+106-Blaujunger
+107-Cannon Ball (Bola)
+108-Cat Buttler (Gato) = Conhecida 
+109-Fightning Battleship
+
+110-Grapple Mania = 
+111-Japonesa = 
+112-Lucky Girl ( Gata ) = 
+113-Red Card Dealer
+114-Red Lightning
+115-Ring Girl Clara = 
+116-Shining Lady
+117-The Gong
+118-Three Minutes (Lutador) = Conhecida
 119 Turboraizer= Deck_Conhecidas(15) OK
+                Deck_Robo
+
+120-Wall Boy
+121-Almighty Reporter
+122-Battlering Minotaur = 
+123-Beast Deity
+124-Blaupanzer
+125-Clay-doll Mechanic =
+126-Cray Soldier
+127-Dancing Wolf
+128-Death Army Guy
+129-Anthrodoid
+
+130-Oasis Girl (Apresentadora)
+131-Queen of Heart = Conhecida
+132-Raizer Custom = Nova Grappler - Battleroid
+133-Rocket Hammer Man ( MegaMan )
+134-Screamin (Polvo) = 
+135-Toolkit Boy (Medabot)
+136-Tough Boy = 
+137-Twin Blader =  
+138-Beast Deity Black Tortoise
+139-Blaukluger = 
+
+140-Boomerang Thrower = Nova Grappler
+141-Brutal Jack = 
+142-Cup Bowler  = 
+143-Death Army Lady =
+144-Eisenkugel = 
+145-Hi-Powered Raizer Custom = 
+146-Hundry Dumpty =
+147-King of Sword =
+148-Kungfu Kid Bolta = 
+149-Magician Girl Kirara = 
+
+150-Marvelous Hani = Nova Grappler
+151-NGM Prototype
+152-Street Bouncer = 
+153-Super Electromagnetic
 155 AsuraKaiser= Deck_Conhecidas(18) OK
+155-Asura = Conhecida
+156-Beast Deity Azure Dragon
+157-Death Metal
+158-Brutal Joker
+159-Gold Rutile
+
+160-Lion Heat ( Leão )
+161-Miss Splendor
+162-Moai the Great
+163-Mr Invincible
+164-Muscle
+165-Perfect Raizer 
+166-Stern 
+167-Top Gun
+168-Ultimate
+169-Black Dragon
+
+170-Coongal (Cachorro)
+171-Crimson Lion
+172-Elixir Sommelier
 173 FalconKnightOfTheAzure= Deck_Conhecidas(21) OK
+174-Flame of Victory
+175-Fortune Bell (Mulher)
+176-Grassland Breeze
+177-Greeting Drummer
+178-Little Fighter
+179-Silent Punisher (Correndo)
+
+180-Speeder Hound
+181-Spring Breeze
+182-Weapons Dealer
+183-Blackmane
+184-Blade Feather
+185-Blessing Owl
+186-Charigal
+187-Disciple of Pain = Conhecida
+188-Evil
+189-Halo
+
+190- Knight of Elegant
+191- Listener
+192- Little Battler
+193- Player ( Saxofone )
+194- Precipice
+195- Scout of Darkness
+196- Silver Fang Witch
+197- Sleygal ( Lobo )
+198- WarHorse ( Cavalo )
+199- Waving ( Coruja )
+
+200-Battle Flag
+201-Black Dragon
+202-Charging Chariot
+203-Flash Edge
+204-Gigantech
+205-Knight of Superior
+206-Lop
+207-Mage
+208-Master of Pain
+209-Player of the Holy
+
+210- Providence
+211- 
+212- ( Leão )
+213- 
+214- 
+215- 
+216- 
+217- 
+218-  
+219- 
+
+220 - Incandescente
+221- Knight of Endurance
+222- Knight of Fury
+223- Satellitefall
+224- Sleygal
+225- Spectral Duke
+226- White Hare
 227 ArmyPenguin= Deck_Conhecidas(24) OK
+228 Cosmo = Conhecida
 229 DimensionalRoboDaibattles= Deck_Robo(3)
+
 230 DimensionalRoboGoyusha= Deck_Robo(6)
+231-
+232-
+233-
+234-
+235- Warrior ( Menino )
+236-
+237-
+238- 
+239- 
+
 240 DimensionalRoboDaimariner= Deck_Robo(9)
 241 DimensionalRoboDailander= Deck_Robo(12)
+242-
+243-
+244-
+245-
+246-
+247- Speedster ( Moto )
+248-
+249-
+
+250-Dimensional Robo Draidragon
+
+260-Enigman Storm
 263 DimensionalRoboDaiyusha= Deck_Robo(15)
 264 UltimateDimensionalRoboGreatDaiyusha= Deck_Robo(18)
+
+270-Eraser Alpaca
 274 SchoolyardProdigyLox= Deck_Conhecidas(27) OK
+
+280-Feather Penguin ( Pinguin )
+283- (Tigre)
+287- (Rato)
+288- (Girafa)
+
+290-Tick Tock Flamingo (Flamingo)
+292- (Tigre)
+293- (Coala)
+296- (Urso)
 299 LawOfficialLox= Deck_Conhecidas(30) OK
+
+300-Multimeter Giraffe
+
+310-School Dominator
+312 ( Gorila
+313 ( Pirata
+314 ( Lula
+315 ( Moça
+317 ( Zumbi
+318 ( Marujo
+319-  = Conhecida
+
+320-Knight Spirit
+323- ( Caveirinha
+324- ( Esqueleto
+325- ( Fortes
+327 ( Zumbi com rosa
+328 ( Cavalo
+
+330-Evil Shade
+331 Cospe Fogo
+333 Cavalo Marinho
+334 Sanfonista
+335 Samurai
+338 (Pirata)
+
 424 SilentTom= Deck_Conhecidas(33) OK OK
 427 CEO Amaterasu=Deck_Conhecidas(36) OK
 497 EmbodimentOfSpearTahr= Deck_Concidas(40) OK

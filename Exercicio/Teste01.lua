@@ -8,8 +8,9 @@ function s.initial_effect(c)
     e1:SetProperty(EFFECT_FLAG_PLAYER_TARGET)
 	e1:SetCode(EVENT_FREE_CHAIN)
 	e1:SetTarget(s.target)
-	e1:SetOperation(s.operation)
+	e1:SetOperation(s.activate)
 	c:RegisterEffect(e1)
+end
 function s.target(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsPlayerCanDraw(tp,2) end
     Duel.SetTargetPlayer(tp)
@@ -18,10 +19,14 @@ function s.target(e,tp,eg,ep,ev,re,r,rp,chk)
 end
 function s.activate(e,tp,eg,ep,ev,re,r,rp)
     local c=e:GetHandler()
-	local p,d=Duel.GetChainInfo(0,CHAININFO_TARGET_PLAYER,CHAININFO_TARGET_PARAM)
---Compra 2 cartas
+    -- Impede que a carta vá automaticamente ao cemitério
+    c:CancelToGrave()
+
+    local p,d=Duel.GetChainInfo(0,CHAININFO_TARGET_PLAYER,CHAININFO_TARGET_PARAM)
     Duel.Draw(p,d,REASON_EFFECT)
---Mande esta carta para o topo do deck do oponente
-    if c:IsRelateToEffect(e) and c:IsAbleToDeck() then
-        Duel.SendtoDeck(c,1-tp,1,REASON_EFFECT)
+
+    -- Manda esta carta para o topo do deck do oponente
+    if c:IsAbleToDeck() then
+        Duel.SendtoDeck(c,1-tp,SEQ_DECKTOP,REASON_EFFECT)
+    end
 end

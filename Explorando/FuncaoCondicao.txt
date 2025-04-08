@@ -4,19 +4,24 @@ Função Condição:
 --Exemplo: Estar em tal fase de batalha
     e1:SetCondition(s.condition)
 
-Exemplo: Estar na Fase Principal 1
-function s.condition(e,tp,eg,ep,ev,re,r,rp)
-    return Duel.GetCurrentPhase()==PHASE_MAIN1
-end
-
 [01] int | Duel.GetCurrentChain([bool real_chain=false])
 
 [02] int | Duel.GetCurrentPhase()
 Precisa estar na Fase Principal = 1 ou 2 ?
-
-e
-
 [01]  0x04 | PHASE_MAIN1
 Estar na Fase Principal 1
 [02] 0x100 | PHASE_MAIN2
 Estar na Fase Principal 2
+
+==========================================
+
+Exemplo: Estar na Fase Principal 1
+Tirangon Bebê 
+-- Durante sua Fase Principal 1: Você pode desassociar 1 matéria xyz desta carta e depois escolher 1 monstro nível 1 que você controle, ele pode atacar diretamente o oponente
+
+function s.condition(e,tp,eg,ep,ev,re,r,rp)
+    return Duel.GetCurrentPhase()==PHASE_MAIN1
+end
+===============================================
+
+

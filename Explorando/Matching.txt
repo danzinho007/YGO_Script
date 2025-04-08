@@ -1,9 +1,0 @@
-Comando: .f matching 
-
-[01]  Card | Duel.GetFirstMatchingCard(function f, int player, int s, int o, Group|Card ex|nil, ...)
-[02] Group | Duel.GetMatchingGroup(function f, int player, int s, int o, Group|Card ex|nil, ...)
-[03]   int | Duel.GetMatchingGroupCount(function f, int player, int s, int o, Group|Card ex|nil, ...)
-[04]   int | Duel.GetMatchingGroupCountRush(function f, int player, int s, int o, Group|Card ex|nil, ...)
-[05]   int | Duel.GetMatchingGroupRush(function f, int player, int s, int o, Group|Card ex|nil, ...)
-[06]  bool | Duel.IsExistingMatchingCard(function f, int player, int s, int o, int count, Group|Card ex|nil, ...)
-[07] Group | Duel.SelectMatchingCard(int sel_player, function f, int player, int s, int o, int min, int max[, cancelable=false], Group|Card ex|nil, ...)

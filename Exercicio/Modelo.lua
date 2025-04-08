@@ -24,6 +24,7 @@ function s.initial_effect()
 -	e1:SetTarget(s.target)
 	e1:SetOperation(s.operation)
 	c:RegisterEffect(e1)
+end
 function s.condition(e,tp,eg,ep,ev,re,r,rp)
     return Duel.GetCurrentPhase()
 end  
@@ -42,3 +43,24 @@ end
 function s.activate(e,tp,eg,ep,ev,re,r,rp)
 	local p,d=
 end
+
+
+
+
+
+
+
+
+
+
+
+
+https://animesonline.gratis/lista-de-animes/
+https://animesdigital.org/animes-legendados-online?filter_letter=S&type_url=animes&filter_audio=legendado&filter_order=name&filter_genre_add=&filter_genre_del=&pagina=4&search=0&limit=30
+https://animesdigital.org/animes-dublado/?filter_letter=S&type_url=animes&filter_audio=dublado&filter_order=name&filter_genre_add=&filter_genre_del=&pagina=1&search=0&limit=30
+
+Anime 
+https://animefire.plus/
+https://animefire.plus/lista-de-filmes-dublados?letra=M
+Anime : Elsword 
+https://animefire.plus/animes/elsword-el-ui-yeoin-todos-os-episodios

@@ -1,8 +1,7 @@
 --Função filtro ( ver FuncaoFiltro)
 --Não é chamada diretamente no código, sim pelo sistema do jogo
 
---Exemplo 01:
---Invoca especialmente
+--Exemplo 01: Invoca especialmente
 --Exemplo: Link Aranha ( 001.lua)
 function s.filter(c,e,tp,zone)
 	return c:IsLevelBelow(4)

@@ -4,7 +4,7 @@ function s.operation(e,tp,eg,ep,ev,re,r,rp)
 
 end
 
-Exemplo 01:
+Exemplo 01: Link_Aranha
 function s.operation(e,tp,eg,ep,ev,re,r,rp)
     local zone=e:GetHandler():GetLinkedZone(tp)
     if zone==0 then return end

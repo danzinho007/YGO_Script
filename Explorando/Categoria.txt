@@ -3,6 +3,7 @@
 Armadilha
 Monstro Efeito XYZ
 Monstro Efeito Link 
+Monstro Efeito
 
 ===============
 Atributo da carta:
@@ -24,7 +25,8 @@ comando:  .c Category
 
 	CATEGORY_DRAW
 Comprar carta
-Exemplo: Mag-Pot of Greed ( Compre 2 cartas )
+Exemplo:Arm-Jar of Greed ( Compre 1 carta )
+		Mag-Pot of Greed ( Compre 2 cartas )
 
 [02]   0x2 | CATEGORY_RELEASE
 [03]   0x4 | CATEGORY_REMOVE
@@ -40,9 +42,8 @@ Mão para o Cemitério
 xxxxx
 
 [10] 0x200 | CATEGORY_SPECIAL_SUMMON
-Especial Invoca da/o Mão/Removidas/Deck/Cemitério para o campo 
-Exemplo: Link 1 Aranha Atq1000
-1 monstro normal
+Invoca especialmente da/o Mão/Removidas/Deck/Cemitério para o campo 
+Exemplo: Link 1 Aranha Atq1000 ( 1 monstro normal )
 Uma vez por turno: pode invocar por Invocacao Especial 1 monstro normal de nivel 4 ou menor da mao para uma zona a qual este card apontar
 
 [11]   0x400 | CATEGORY_TOKEN

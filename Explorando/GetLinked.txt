@@ -1,9 +1,0 @@
-Comando: .f getlinked 
-
-[01] Group | Card.GetLinkedGroup(Card c)
-[02]   int | Card.GetLinkedGroupCount(Card c)
-[03]   int | Card.GetLinkedZone(Card c[, int cp = c:GetControler()])
-[04] Group | Duel.GetLinkedGroup(int player, int location1, int location2)
-[05]   int | Duel.GetLinkedGroupCount(int player, int location1, int location2)
-[06]   int | Duel.GetLinkedZone(int player)
-[07]   int | Group.GetLinkedZone(Group g, int cp)

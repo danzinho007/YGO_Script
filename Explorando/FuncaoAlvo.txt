@@ -1,5 +1,6 @@
 --Função alvo
 --Verificar o efeito
+
 function s.target(e,tp,eg,ep,ev,re,r,rp,chk)
 --Verifica se o efeito pode ser ativado
     if chk==0 then
